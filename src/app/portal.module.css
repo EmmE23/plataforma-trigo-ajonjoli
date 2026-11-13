@@ -1,0 +1,30 @@
+.portal { min-height: 100vh; color: var(--texto); }
+.encabezado { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; padding: 16px max(20px, calc((100% - 1160px)/2)); background: #fff; border-bottom: 1px solid var(--borde); }
+.marca { color: var(--texto); font-size: 1.2rem; font-weight: 700; text-decoration: none; }
+.marca span { display: inline-block; margin-left: 8px; font-size: .85rem; }
+.encabezado nav { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+.encabezado nav a { display: inline-flex; align-items: center; min-height: 44px; padding: 8px 10px; color: var(--texto); text-decoration: none; border-radius: var(--radio); }
+.encabezado nav a:hover { background: #f0eee9; }
+/* El botón "Donar" del menú conserva texto blanco (contraste AA sobre terracota) */
+.encabezado nav a:global(.btn), .encabezado nav a:global(.btn):hover { color: #fff; background: var(--primario-oscuro); }
+/* Títulos de tarjetas: tamaño moderado, sin mayúsculas forzadas */
+.contenido :global(.tarjeta) h2 { font-size: 1.2rem; letter-spacing: normal; text-transform: none; color: var(--texto); }
+.contenido { width: min(1160px, calc(100% - 40px)); margin: 0 auto; padding: 48px 0; }
+.contenido > h1 { max-width: 980px; margin: 0 0 20px; font-size: clamp(2rem, 4vw, 3.4rem); }
+.contenido section { margin: 44px 0; scroll-margin-top: 24px; }
+.contenido h2 { font-size: clamp(1.6rem, 3vw, 2.2rem); }
+.hero { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(260px, .8fr); align-items: center; gap: 32px; padding: 42px 0; }
+.hero h1 { margin: 0 0 18px; font-size: clamp(2rem, 4vw, 3.25rem); }
+.hero p { max-width: 760px; font-size: 1.15rem; }
+.acciones { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 24px; }
+.foto { min-height: 280px; display: grid; place-items: center; padding: 24px; text-align: center; border: 2px dashed #767676; border-radius: 10px; background: #ebe9e4; color: var(--texto); }
+.tarjetas { margin: 20px 0 54px; }
+.enlaces { color: var(--primario); font-weight: 600; }
+.pie { padding: 28px max(20px, calc((100% - 1160px)/2)); background: #2b2b2b; color: #fff; }
+.pie a { color: #fff; }
+@media (max-width: 720px) {
+  .hero { grid-template-columns: 1fr; padding: 28px 0; }
+  .hero h1 { font-size: 1.6rem; }
+  .foto { min-height: 190px; }
+  .contenido { padding: 30px 0; }
+}
