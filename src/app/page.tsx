@@ -13,7 +13,9 @@ export default async function InicioPage() {
     <div className={styles.portal}>
       <header className={styles.encabezado}>
         <a className={styles.marca} href="/" aria-label="Fundación Trigo y Ajonjolí, inicio">
-          Fundación Trigo y Ajonjolí <span className="pendiente">[PENDIENTE: logo]</span>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src="/img/logo-trigo-ajonjoli.png" alt="" width={56} height={56} className={styles.logo} />
+          Fundación Trigo y Ajonjolí
         </a>
         <nav aria-label="Navegación principal">
           <a href="/">Inicio</a>
@@ -41,9 +43,17 @@ export default async function InicioPage() {
               <a className="btn btn-secundario" href="#voluntariado">Quiero ser voluntario</a>
             </div>
           </div>
-          <div className={styles.foto} role="img" aria-label="Espacio reservado para una foto de una jornada de entrega">
-            <span className="pendiente">[PENDIENTE: foto de una jornada de entrega]</span>
-          </div>
+          <figure className={styles.figuraJornada}>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/img/jornada-entrega.jpg"
+              alt="Voluntario de la fundación junto a personas atendidas durante una jornada nocturna de entrega"
+              width={780}
+              height={1040}
+              className={styles.fotoJornada}
+            />
+            <figcaption>Jornada de entrega. Los rostros se ocultan para proteger la identidad de las personas.</figcaption>
+          </figure>
         </section>
 
         <section className={`rejilla rejilla-3 ${styles.tarjetas}`} aria-label="Nuestra labor">
@@ -53,7 +63,7 @@ export default async function InicioPage() {
           </article>
           <article className="tarjeta">
             <h2>Jornadas</h2>
-            <p>En la madrugada, con el equipo de apoyo · <span className="pendiente">[PENDIENTE: cifra]</span></p>
+            <p>En la madrugada, con el equipo de apoyo · 2 por semana</p>
           </article>
           <article className="tarjeta">
             <h2>Qué entregamos</h2>
@@ -67,7 +77,7 @@ export default async function InicioPage() {
             <article className="tarjeta">
               <h3>Donar dinero</h3>
               <p>
-                Por Nequi o cuentas bancarias <span className="pendiente">[PENDIENTE: números de Nequi y cuentas]</span>; o pago
+                Por <strong>Nequi: 350 803 3677</strong> o a la cuenta de ahorros <strong>Bancolombia 20200003464</strong>; o pago
                 en línea (modo de pruebas).
               </p>
               <a className={styles.enlaces} href="/donar">Conoce cómo donar</a>
@@ -118,7 +128,9 @@ export default async function InicioPage() {
           Barrio Maipore, Soacha (Cundinamarca) · <a href="mailto:fundaciontrijoli@outlook.com">fundaciontrijoli@outlook.com</a> ·{" "}
           <a href="tel:+573508033677">350 803 3677</a>
         </p>
-        <p><span className="pendiente">[PENDIENTE: redes sociales]</span></p>
+        <p>
+          <a href="https://www.facebook.com/share/19y6Bum7vu/" target="_blank" rel="noopener noreferrer">Síguenos en Facebook</a>
+        </p>
         <p>NIT 901.243.769-6</p>
       </footer>
       <Analitica ruta="/" />

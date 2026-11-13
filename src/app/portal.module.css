@@ -1,7 +1,11 @@
 .portal { min-height: 100vh; color: var(--texto); }
 .encabezado { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; padding: 16px max(20px, calc((100% - 1160px)/2)); background: #fff; border-bottom: 1px solid var(--borde); }
 .marca { color: var(--texto); font-size: 1.2rem; font-weight: 700; text-decoration: none; }
-.marca span { display: inline-block; margin-left: 8px; font-size: .85rem; }
+.marca { display: inline-flex; align-items: center; gap: 10px; }
+.logo { width: 56px; height: 56px; border-radius: 50%; object-fit: cover; }
+.figuraJornada { margin: 0; }
+.fotoJornada { display: block; width: 100%; height: auto; max-height: 460px; object-fit: cover; object-position: center 30%; border-radius: 10px; border: 1px solid var(--borde); }
+.figuraJornada figcaption { margin-top: 8px; font-size: .85rem; color: var(--texto-suave); }
 .encabezado nav { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
 .encabezado nav a { display: inline-flex; align-items: center; min-height: 44px; padding: 8px 10px; color: var(--texto); text-decoration: none; border-radius: var(--radio); }
 .encabezado nav a:hover { background: #f0eee9; }

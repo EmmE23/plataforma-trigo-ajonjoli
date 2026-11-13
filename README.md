@@ -123,5 +123,5 @@ app/
 - La lectura de QR con la cámara usa la API `BarcodeDetector` del navegador (Chrome o Edge). Si no está disponible, se puede escribir el código del carné.
 - La base PGlite es para la demostración en un solo equipo. Para producción se recomienda Supabase (PostgreSQL administrado con
   copias de respaldo automáticas, RNF-04), usando `db/schema.sql`.
-- Los textos marcados en amarillo como **[PENDIENTE: …]** en el portal son datos que la fundación debe confirmar
-  (logo, foto, cifras, correo, teléfono, redes sociales y cuentas para donar).
+- La foto del portal muestra los rostros pixelados para proteger la identidad de las personas atendidas (Ley 1581 de 2012),
+  en especial la de un menor de edad. Solo debe reemplazarse por la original si existe autorización escrita de todas las personas.

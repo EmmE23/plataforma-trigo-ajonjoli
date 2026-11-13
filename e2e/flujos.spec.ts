@@ -16,10 +16,13 @@ async function ingresar(page: Page, rol: keyof typeof USUARIOS) {
 }
 
 test.describe("Portal público", () => {
-  test("muestra la misión, los datos pendientes y la lista de necesidades del inventario", async ({ page }) => {
+  test("muestra la misión, la foto, los datos de la fundación y la lista de necesidades del inventario", async ({ page }) => {
     await page.goto("/");
     await expect(page.getByRole("heading", { level: 1 })).toContainText("Transformar la vida de los habitantes de la calle");
-    await expect(page.locator(".pendiente").first()).toBeVisible();
+    await expect(page.getByAltText(/jornada nocturna de entrega/)).toBeVisible();
+    await expect(page.getByText("Nequi: 350 803 3677")).toBeVisible();
+    await expect(page.getByRole("link", { name: "Síguenos en Facebook" })).toHaveAttribute("href", /facebook\.com/);
+    await expect(page.locator(".pendiente")).toHaveCount(0);
     await expect(page.getByText("Lo que más necesitamos hoy:")).toBeVisible();
     await expect(page.getByText("La lista se actualiza según el inventario")).toBeVisible();
   });
