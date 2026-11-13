@@ -1,0 +1,29 @@
+# Dependencias y compilación
+node_modules/
+.next/
+out/
+*.tsbuildinfo
+next-env.d.ts
+
+# Base de datos local de la demostración y de las pruebas (datos generados, no se versionan)
+data/
+
+# Variables de entorno: contienen la clave JWT. NUNCA se suben (use .env.example como plantilla)
+.env
+.env.local
+.env.*.local
+.env.production
+
+# Resultados de pruebas
+coverage/
+test-results/
+playwright-report/
+blob-report/
+
+# Registros y archivos del sistema / editor
+*.log
+npm-debug.log*
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

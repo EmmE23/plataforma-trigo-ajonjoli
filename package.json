@@ -1,0 +1,42 @@
+{
+  "name": "trigo-ajonjoli-plataforma",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Plataforma web integrada de bajo costo para la gestión de visitas, inventarios y donaciones de la Fundación Trigo y Ajonjolí",
+  "scripts": {
+    "setup": "node scripts/setup.mjs",
+    "seed": "node scripts/setup.mjs --reset",
+    "dev": "next dev -p 3000",
+    "build": "next build",
+    "start": "next start -p 3000",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "test:e2e": "playwright test",
+    "capturas": "playwright test -c playwright.capturas.config.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@electric-sql/pglite": "^0.5.16",
+    "bcryptjs": "^3.0.3",
+    "jose": "^6.2.17",
+    "next": "^15.5.29",
+    "qrcode": "^1.5.4",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.65.0",
+    "@types/node": "^26.6.6",
+    "@types/qrcode": "^1.5.6",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitest/coverage-v8": "^5.1.0",
+    "typescript": "^5.9.3",
+    "vitest": "^5.1.0"
+  },
+  "overrides": {
+    "postcss": "8.5.32"
+  }
+}
