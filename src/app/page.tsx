@@ -49,7 +49,7 @@ export default async function InicioPage() {
         <section className={`rejilla rejilla-3 ${styles.tarjetas}`} aria-label="Nuestra labor">
           <article className="tarjeta">
             <h2>Personas atendidas</h2>
-            <p>Desplazados y habitantes de calle · <span className="pendiente">[PENDIENTE: cifra]</span></p>
+            <p>Desplazados y habitantes de calle · entre 20 y 45 personas por jornada</p>
           </article>
           <article className="tarjeta">
             <h2>Jornadas</h2>
@@ -115,8 +115,8 @@ export default async function InicioPage() {
 
       <footer id="contacto" className={styles.pie}>
         <p>
-          Barrio Maipore, Soacha (Cundinamarca) · <span className="pendiente">[PENDIENTE: correo]</span> ·{" "}
-          <span className="pendiente">[PENDIENTE: teléfono]</span>
+          Barrio Maipore, Soacha (Cundinamarca) · <a href="mailto:fundaciontrijoli@outlook.com">fundaciontrijoli@outlook.com</a> ·{" "}
+          <a href="tel:+573508033677">350 803 3677</a>
         </p>
         <p><span className="pendiente">[PENDIENTE: redes sociales]</span></p>
         <p>NIT 901.243.769-6</p>
